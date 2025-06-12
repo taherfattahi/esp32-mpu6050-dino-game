@@ -67,27 +67,25 @@ The C# WPF application acts as a TCP server, listening for a connection from the
 
 
 2.  **ESP32 Setup:**
-    * Open the ESP32 code in the Arduino IDE.
+    * Open the ESP32 code (imu3d.ino) in the Arduino IDE.
     * Install the required libraries from the Library Manager.
     * Update the Wi-Fi credentials in the code:
         ```cpp
         const char* ssid = "YOUR_WIFI_SSID";
         const char* password = "YOUR_WIFI_PASSWORD";
         ```
-    * You will update the `host_ip` after running the WPF application.
-    * Upload the code to your ESP32.
-
+        
 3.  **WPF Game Setup:**
     * Open the `IMU3D_MPU6050_WPF.sln` file in Visual Studio.
     * Build and run the project (press `F5`).
     * The application window will appear and display the IP address it's listening on (e.g., `Listening on 192.168.1.9:12345...`).
 
 4.  **Connect Them:**
-    * Go back to your Arduino code. Update the `host_ip` to the IP address shown in the game window.
+    * Go back to the Arduino code(imu3d.ino). Update the `host_ip` to the IP address shown in the game window.
         ```cpp
         const char* host_ip = "192.168.1.9"; // Use the IP from the WPF app
         ```
-    * Re-upload the code to your ESP32.
+    * Re-upload the code to the ESP32.
     * Power on the ESP32. It should now connect to the game, and the status will change to "Client Connected!".
 
 ---
