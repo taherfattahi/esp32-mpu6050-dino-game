@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("IMU3D-MPU6050-WPF")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9b5234495b75a735b28a6d827d47fbe64cb5d118")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d9486b3b54ad7042f7fc3c032bfcc64388a75b7b")]
 [assembly: System.Reflection.AssemblyProductAttribute("IMU3D-MPU6050-WPF")]
 [assembly: System.Reflection.AssemblyTitleAttribute("IMU3D-MPU6050-WPF")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

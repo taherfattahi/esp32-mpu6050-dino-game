@@ -22,7 +22,7 @@ The ESP32 is the brain of the control system. It continuously reads raw data fro
 
 To get the best of both worlds, we use a **Complementary Filter**. This is a sensor fusion algorithm that combines the gyroscope and accelerometer data.
 
-$$\text{angle} = \alpha \times (\text{angle} + \text{gyro\_rate} \times dt) + (1 - \alpha) \times \text{accel\_angle}$$
+![Math Screenshot](images/math.png)
 
 In simple terms, the filter trusts the gyroscope for quick, short-term rotation changes and uses the accelerometer to correct any long-term drift. In this project's code, `alpha` is set to **0.98**, meaning the final angle is 98% from the integrated gyro reading and 2% from the accelerometer reading. This provides a stable and responsive pitch angle (`angleX`), which is then sent over Wi-Fi to the game.
 
