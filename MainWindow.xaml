@@ -1,0 +1,34 @@
+﻿<Window x:Class="IMU3D_MPU6050_WPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:IMU3D_MPU6050_WPF"
+        mc:Ignorable="d"
+        Title="IMU Dinosaur Game" Height="450" Width="800"
+        Loaded="Window_Loaded" Closing="Window_Closing"
+        KeyDown="Window_KeyDown">
+    <Grid Background="#FF333333" Name="MainGrid">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Border Grid.Row="0" Padding="10" Background="#FF4F4F4F">
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Status: " Foreground="White" FontWeight="Bold"/>
+                <TextBlock x:Name="StatusText" Text="Awaiting Connection..." Foreground="OrangeRed"/>
+                <TextBlock Text=" | Score: " Foreground="White" Margin="20,0,0,0" FontWeight="Bold"/>
+                <TextBlock x:Name="ScoreText" Text="0" Foreground="WhiteSmoke" FontFamily="Consolas"/>
+            </StackPanel>
+        </Border>
+
+        <Canvas Grid.Row="1" Name="GameCanvas" Background="LightSkyBlue" Focusable="True">
+            <Rectangle Name="Player" Fill="SaddleBrown" Height="50" Width="30" Canvas.Left="50" Canvas.Bottom="0"/>
+            <Rectangle Name="Ground" Fill="ForestGreen" Height="10" Width="{Binding ActualWidth, ElementName=GameCanvas}" Canvas.Bottom="0"/>
+
+            <TextBlock x:Name="GameOverText" Text="Game Over!" FontSize="48" FontWeight="Bold" Foreground="Red" Visibility="Collapsed"/>
+            <TextBlock x:Name="RestartText" Text="Press 'R' to Restart" FontSize="20" Foreground="White" Visibility="Collapsed"/>
+        </Canvas>
+    </Grid>
+</Window>
