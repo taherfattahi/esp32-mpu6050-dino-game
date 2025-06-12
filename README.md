@@ -5,7 +5,7 @@ A classic side-scrolling dinosaur game with a twist! Instead of using a keyboard
 This project demonstrates real-time sensor data processing, wireless communication over Wi-Fi, and interactive C# WPF application development.
 
 ## Demo Video
-[![Dino Game Screenshot](images/esp32-mpu.jpg)](https://youtube.com/shorts/oR-sIzVkKSU)
+[![Dino Game Screenshot](images/esp32-mpu.jpg)](https://youtube.com/shorts/ooQrAgZOSRA)
 
 ---
 
